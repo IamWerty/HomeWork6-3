@@ -1,21 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-//  {Console.Write("");
-//  {[var name = Console.ReadLine();
-//  {[{значення2} name = Convert.To{значення2}(Console.ReadLine())
-//Console.WriteLine($"{name}");     $ - Форматування, @ - Сприймати тільки за текст, \n - Перехід на нову строку(писати в "")
-//
-//  Синтаксиз умови:
-//
-//  if (условие)
-//  {
-        // "==" - Дорівнює, "!=" - Не дорівнює, "<"/">" - Меньше/Більше, "<="/">=" - Меньше дорівнює/Більше дорівнює
-//  }
-//  else if (другое_условие)
-//  {
-        // "++" - Збільшення на 1, "--" - Зменьшення на 1, "||" - Або, "&&" - І
-//  }
-//  else
-//  {
-        // 
-//  }
+﻿using System.Text;
+
+Console.OutputEncoding = Encoding.UTF8;
+
+Console.Write("Введіть межу: ");
+int end = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 2; i <= end; i++)
+{
+    int j;
+    for (j = 2; j < i; j++)
+    {
+        if (i % j == 0)
+        {
+            break;
+        }
+    }
+
+    if (j == i)
+    {
+        Console.WriteLine(i);
+    }
+}
+//ох і напрягли ж в мене з цією задачою мізки...
